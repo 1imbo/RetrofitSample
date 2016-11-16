@@ -35,7 +35,7 @@ public class HttpApiClientManager {
     private HttpApiClientManager() {
         OkHttpClient okHttpClient = new OkHttpClient();
 
-        okHttpClient.interceptors().add(new Interceptor() {
+        /*okHttpClient.interceptors().add(new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
@@ -47,7 +47,7 @@ public class HttpApiClientManager {
                 request = request.newBuilder().url(url).build();
                 return chain.proceed(request);
             }
-        });
+        });*/
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)

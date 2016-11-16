@@ -12,5 +12,5 @@ import retrofit2.http.Query;
 
 public interface CustomSearchRestApi {
     @GET("customsearch/v1")
-    Call<SearchResult> doCustomSearch(@Query("cx") String cseId, @Query("q") String query);
+    Call<SearchResult> doCustomSearch(@Query("key") String apiKey, @Query("cx") String cseId, @Query("q") String query);
 }
